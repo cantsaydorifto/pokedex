@@ -1,0 +1,36 @@
+h1 {
+    font-size: 4rem;
+    color: #ffff00;
+    text-align: center;
+    padding: 1rem 0 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.start {
+    font-size: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.rightArrow {
+    border-radius: 50%;
+    background-color: red;
+    width: 45px;
+    height: 45px;
+    position: relative;
+}
+
+.rightArrow::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    padding: 10px;
+    transform: rotate(-45deg);
+}
