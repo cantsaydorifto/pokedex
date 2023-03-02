@@ -1,0 +1,81 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.container p {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+
+.container img {
+    height: 70%;
+}
+
+.card{
+    height: 200px;
+    width: 200px;
+    border: 2px solid white;
+    border-radius: 16px;
+}
+
+.searchByName {
+    background-color: #e37b7b;
+}
+
+.all {
+    background-color: #8cc68c;
+}
+
+.linkCard {
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.linkAll{
+    color: #062F06;
+}
+
+.linkName{
+    color: #110404;
+}
+
+@media only screen and (min-width:500px) {
+    .card{
+        width: 250px;
+        height: 250px;
+    }
+    .container p{
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .card{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width:850px) {
+    .container {
+        flex-direction: row;
+    }
+    .container p{
+        font-size: 1.6rem;
+    }
+    .card{
+        width: 400px;
+        height: 400px;
+    }
+}
