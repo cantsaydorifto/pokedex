@@ -50,20 +50,30 @@
     color: #110404;
 }
 
-@media only screen and (min-width:500px) {
+@media only screen and (min-width:500px) and (orientation : portrait)  {
     .container p{
         font-size: 1.2rem;
     }
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:500px) and (orientation : landscape) {
+    .card{
+        width: 250px;
+        height:250px;
+    }
+    .container {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width:768px) and (orientation : portrait) {
     .card{
         width: 350px;
         height:350px;
     }
 }
 
-@media only screen and (min-width:850px) {
+@media only screen and (min-width:850px){
     .container {
         flex-direction: row;
     }
@@ -71,7 +81,14 @@
         font-size: 1.6rem;
     }
     .card{
-        width: 400px;
-        height: 400px;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width:950px){
+    .card{
+        width: 300px;
+        height: 300px;
     }
 }
