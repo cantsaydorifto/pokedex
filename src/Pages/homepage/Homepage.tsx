@@ -1,14 +1,11 @@
-import React from 'react';
+import Carousel from '../../Components/Carousel/Carousel';
 import styles from './Homepage.module.css';
-// import Marquee from '../../Marquee/Marquee';
 
 function Homepage() {
   return (
     <>
-      <div className={styles.mainPageHeading}>
-        <h1>Pokedex</h1>
-      </div>
-      {/* <Marquee /> */}
+      <h1>Pokedex</h1>
+      <Carousel />
       <div className={styles.start}>
         <p>Start</p>
         <div className={styles.rightArrow}>
