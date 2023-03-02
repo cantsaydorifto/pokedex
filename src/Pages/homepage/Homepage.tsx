@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Carousel from '../../Components/Carousel/Carousel';
 import styles from './Homepage.module.css';
 
@@ -8,11 +9,7 @@ function Homepage() {
       <Carousel />
       <div className={styles.start}>
         <p>Start</p>
-        <div className={styles.rightArrow}>
-          {/* <Link to="/start">
-            <img src={rightArrow} alt="right arrow" />
-          </Link> */}
-        </div>
+        <Link to="/start" className={styles.rightArrow} />
       </div>
     </>
   );
