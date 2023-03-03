@@ -1,6 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Loading from '../../Components/Loading/Loading';
+
 import {
   getPokemonData,
   getPokemonId,
@@ -11,7 +13,6 @@ import styles from './Pokedex.module.css';
 
 function Pokedex() {
   const [page, setPage] = useState(1);
-
   const { data } = useQuery(['pokemon', page], () => getPokemonNames(page), {
     refetchOnWindowFocus: false,
   });
@@ -33,7 +34,7 @@ function Pokedex() {
   );
 
   if (!pokeData || isLoading) {
-    return <h1>Loading</h1>;
+    return <Loading />;
   }
 
   return (
