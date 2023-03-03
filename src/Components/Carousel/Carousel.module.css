@@ -65,7 +65,7 @@
     }
 }
 
-@media only screen and (max-height:500px)  {
+@media only screen and (max-height:700px)  {
     .carousel {
         width: 80%;
         height: 160px;
@@ -106,6 +106,7 @@
 
     .carousel {
         height: 210px;
+        width: 80%;
     }
 
     .carouselContent {
