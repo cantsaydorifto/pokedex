@@ -9,6 +9,7 @@
 
 .container p {
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
     color: #ffffff;
 }
 
@@ -48,12 +49,6 @@
 
 .linkName{
     color: #110404;
-}
-
-@media only screen and (min-width:500px) and (orientation : portrait)  {
-    .container p{
-        font-size: 1.2rem;
-    }
 }
 
 @media only screen and (min-width:500px) and (orientation : landscape) {

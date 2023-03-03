@@ -14,7 +14,7 @@ export default function Start() {
         </Link>
       </div>
       <div className={`${styles.card} ${styles.all}`}>
-        <Link to="pokedex" className={`${styles.linkCard} ${styles.linkAll}`}>
+        <Link to="/pokedex" className={`${styles.linkCard} ${styles.linkAll}`}>
           <p>All Pokemon</p>
           <img
             src="https://github.com/cantsaydorifto/pokedex-app/blob/master/src/icons/bulbasaur.png?raw=true"
