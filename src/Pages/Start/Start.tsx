@@ -1,9 +1,15 @@
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import styles from './Start.module.css';
 
 export default function Start() {
   return (
-    <div className={styles.container}>
+    <motion.div
+      className={styles.container}
+      initial={{ x: 400, rotateZ: 5 }}
+      animate={{ x: 0, rotateZ: 0 }}
+      exit={{ x: -800, y: 800, opacity: 0, rotateZ: -15 }}
+    >
       <div className={`${styles.card} ${styles.searchByName}`}>
         <Link to="/search" className={`${styles.linkCard} ${styles.linkName}`}>
           <p>Search by name</p>
@@ -22,6 +28,6 @@ export default function Start() {
           />
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
