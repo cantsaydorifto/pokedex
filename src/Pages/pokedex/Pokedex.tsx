@@ -38,7 +38,7 @@ function Pokedex() {
   }
 
   return (
-    <>
+    <div className="root">
       <h1 className={styles.pokedexHeading}>Pokedex</h1>
       <div className={styles.prevNextButtons}>
         {prevPageUrl && (
@@ -82,7 +82,7 @@ function Pokedex() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 
