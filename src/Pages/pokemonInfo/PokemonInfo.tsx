@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
+import { motion } from 'framer-motion';
 import styles from './PokemonInfo.module.css';
 import Loading from '../../Components/Loading/Loading';
 import {
@@ -37,7 +38,9 @@ function PokemonInfo() {
 
   return (
     <div className={styles.container}>
-      <div
+      <motion.div
+        initial={{ x: 200, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
         className={`${styles.infoCard} ${curPokemon.types[0].type.name}CardColor`}
       >
         {Number(id) > 1 && (
@@ -104,7 +107,7 @@ function PokemonInfo() {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

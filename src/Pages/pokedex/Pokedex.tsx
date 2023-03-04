@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Loading from '../../Components/Loading/Loading';
@@ -7,6 +8,7 @@ import {
   getPokemonData,
   getPokemonId,
   getPokemonNames,
+  pokedexPageVariant,
   PokemonData,
 } from '../helpers';
 import styles from './Pokedex.module.css';
@@ -15,6 +17,7 @@ function Pokedex() {
   const [page, setPage] = useState(1);
   const { data } = useQuery(['pokemon', page], () => getPokemonNames(page), {
     refetchOnWindowFocus: false,
+    cacheTime: 0,
   });
   const res = data?.data.results;
   const prevPageUrl = data?.data.previous;
@@ -38,7 +41,13 @@ function Pokedex() {
   }
 
   return (
-    <div className="root">
+    <motion.div
+      className="root"
+      variants={pokedexPageVariant}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
       <h1 className={styles.pokedexHeading}>Pokedex</h1>
       <div className={styles.prevNextButtons}>
         {prevPageUrl && (
@@ -82,7 +91,7 @@ function Pokedex() {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -54,3 +54,42 @@ export const pokeStats = [
   'Spl-Defense',
   'Speed',
 ];
+
+export const pokedexPageVariant = {
+  initial: {
+    x: 500,
+    y: -500,
+    rotateZ: 5,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    y: 0,
+    rotateZ: 0,
+    opacity: 1,
+  },
+  exit: {
+    opacity: 0,
+    rotateZ: -5,
+    x: -300,
+    y: 300,
+  },
+};
+
+export const homePageVariant = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+  },
+  exit: {
+    x: -150,
+    opacity: 0,
+    transition: {
+      ease: 'easeInOut',
+    },
+  },
+};
