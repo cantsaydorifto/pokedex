@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import styles from './Start.module.css';
+import bulbasaur from '../../assets/bulbasaur.png';
+import pikachu from '../../assets/pikachu-search.png';
 
 export default function Start() {
   return (
@@ -13,19 +15,13 @@ export default function Start() {
       <div className={`${styles.card} ${styles.searchByName}`}>
         <Link to="/search" className={`${styles.linkCard} ${styles.linkName}`}>
           <p>Search by name</p>
-          <img
-            src="https://github.com/cantsaydorifto/pokedex-app/blob/master/src/icons/pikachu-search.png?raw=true"
-            alt="search by name"
-          />
+          <img src={pikachu} alt="search by name" />
         </Link>
       </div>
       <div className={`${styles.card} ${styles.all}`}>
         <Link to="/pokedex" className={`${styles.linkCard} ${styles.linkAll}`}>
           <p>All Pokemon</p>
-          <img
-            src="https://github.com/cantsaydorifto/pokedex-app/blob/master/src/icons/bulbasaur.png?raw=true"
-            alt="all pokemon"
-          />
+          <img src={bulbasaur} alt="all pokemon" />
         </Link>
       </div>
     </motion.div>
