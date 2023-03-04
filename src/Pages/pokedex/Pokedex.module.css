@@ -43,7 +43,28 @@
     border-radius: 16px;
     gap: 10px;
     max-width: 250px;
+    transition: all 0.3s;
 }
+
+.pokemonCard:hover {
+    transform: scale(1.05);
+}
+
+/* .mainPokedexCard>div:hover {
+    animation: pokemon-card-rotate 0.3s;
+} */
+
+/* @keyframes pokemon-card-rotate {
+
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(1deg);
+    }
+} */
 
 .pokeId {
     position: absolute;

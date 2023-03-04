@@ -8,6 +8,11 @@
     filter: saturate(2);
     width: 100%;
     height: 100%;
+    transition: all 0.5s;
+}
+
+.carouselContent img:hover{
+    transform: scale(1.1);
 }
 
 .carouselContent {

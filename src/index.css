@@ -23,6 +23,13 @@ body {
     width: 45px;
     height: 45px;
     position: relative;
+    transition: all 0.3s;
+}
+
+.arrow:hover{
+    transform: scale(1.05);
+    background-color: greenyellow;
+    box-shadow: 1px 1px 10px gray;
 }
 
 .arrow::before {
