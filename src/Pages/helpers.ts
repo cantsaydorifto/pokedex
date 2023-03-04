@@ -55,6 +55,11 @@ export const pokeStats = [
   'Speed',
 ];
 
+export type SearchDataPokemon = {
+  name: string;
+  id: number;
+};
+
 export const pokedexPageVariant = {
   initial: {
     x: 500,

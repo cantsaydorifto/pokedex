@@ -5,6 +5,7 @@ import './App.css';
 import Homepage from './Pages/homepage/Homepage';
 import Pokedex from './Pages/pokedex/Pokedex';
 import PokemonInfo from './Pages/pokemonInfo/PokemonInfo';
+import Search from './Pages/search/Search';
 import Start from './Pages/Start/Start';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<Homepage />} />
           <Route path="/start" element={<Start />} />
+          <Route path="/search" element={<Search />} />
           <Route path="/pokedex" element={<Pokedex />} />
           <Route path="/pokedex/:id" element={<PokemonInfo />} />
         </Routes>
