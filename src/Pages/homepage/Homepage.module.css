@@ -16,22 +16,3 @@ h1 {
     color: white;
     margin-bottom: 10px;
 }
-
-.rightArrow {
-    border-radius: 50%;
-    background-color: red;
-    width: 45px;
-    height: 45px;
-    position: relative;
-}
-
-.rightArrow::before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 5px;
-    border: solid black;
-    border-width: 0 5px 5px 0;
-    padding: 10px;
-    transform: rotate(-45deg);
-}
