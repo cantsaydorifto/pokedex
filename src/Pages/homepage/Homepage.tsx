@@ -9,7 +9,7 @@ function Homepage() {
       <Carousel />
       <div className={styles.start}>
         <p>Start</p>
-        <Link to="/start" className={styles.rightArrow} />
+        <Link to="/start" className="arrow" />
       </div>
     </>
   );

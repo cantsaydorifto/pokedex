@@ -8,7 +8,7 @@ import {
   getPokemonId,
   getPokemonNames,
   PokemonData,
-} from './helpers';
+} from '../helpers';
 import styles from './Pokedex.module.css';
 
 function Pokedex() {
@@ -57,9 +57,7 @@ function Pokedex() {
           <div key={el.id}>
             <Link
               to={`/pokedex/${el.id}`}
-              className={`${styles.pokemonCard} ${
-                styles[`${el.types[0].type.name}CardColor`]
-              }`}
+              className={`${styles.pokemonCard} ${el.types[0].type.name}CardColor`}
             >
               <div className={styles.pokeId}>#{el.id}</div>
               <img
@@ -69,11 +67,11 @@ function Pokedex() {
                 alt={el.name}
               />
               <h2>{el.name[0].toUpperCase() + el.name.slice(1)}</h2>
-              <div className={styles.typeRow}>
+              <div className="typeRow">
                 {el.types.map((pokeType) => (
                   <div
                     key={Math.random()}
-                    className={`${styles.type} ${styles[pokeType.type.name]}`}
+                    className={`type ${pokeType.type.name}`}
                   >
                     {pokeType.type.name[0].toUpperCase() +
                       pokeType.type.name.slice(1)}
